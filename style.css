@@ -16,7 +16,6 @@ body {
 
 /* Book */
 .book {
-    border: 1px solid black;
     position: relative;
     width: 350px;
     height: 500px;
@@ -24,7 +23,6 @@ body {
 }
 
 .paper {
-    border: 1px solid red;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -107,5 +105,22 @@ i {
 }
 
 #p3 {
-    z-index: 1
+    z-index: 1;
 }
+
+
+/* Cosmetics cover*/
+#f1 {
+    background-image: url('images/cover.jpg'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    align-items:baseline;
+}
+
+#f1 h1{
+    padding-top: 10%;
+}
+
+

@@ -32,8 +32,8 @@ function closeBook(isAtBeginning) {
     else{
         book.style.transform = "translateX(100%)";
     }
-    prevBtn.style.transform = "translateX(0%)";
-    nextBtn.style.transform = "translateX(0%)";
+    prevBtn.style.transform = "translateX(0px)";
+    nextBtn.style.transform = "translateX(0px)";
 
 }
 
@@ -48,11 +48,12 @@ function goNextPage() {
             case 2:    
                 paper2.classList.add("flipped");
                 paper2.style.zIndex = 2;
-
+                paper3.style.zIndex = 3; //Added this line since this page was not clickable when on back of page 2
                 break;
             case 3:    
                 paper3.classList.add("flipped");
                 paper3.style.zIndex = 3;
+                closeBook(false);
                 break;
             default:
                 throw new Error("Unknown state");
@@ -63,10 +64,9 @@ function goNextPage() {
 
 function goPrevPage() {
     if(currentLocation > 1) {
-        switch(currentLocation)
-        {
+        switch(currentLocation) {
             case 2:
-                closeBook();
+                closeBook(true);
                 paper1.classList.remove("flipped");
                 paper1.style.zIndex = 3;
                 break;
@@ -77,10 +77,12 @@ function goPrevPage() {
             case 4:
                 openBook();
                 paper3.classList.remove("flipped");
-                paper3.style.zIndex = 1;
+                paper3.style.zIndex = 2; //Changed it from 1 to 2 since it would cause glitch where i cannot click on link on page if i reached end of book
                 break;
             default:
                 throw new Error("Unknown state");
         }
+
+        currentLocation--;
     }
 }
