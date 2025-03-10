@@ -73,11 +73,12 @@ function goPrevPage() {
             case 3:
                 paper2.classList.remove("flipped");
                 paper2.style.zIndex = 2;
+                paper3.style.zIndex = 1; // This prevents paper3 from overpowering paper 2 when going back
                 break;
             case 4:
                 openBook();
                 paper3.classList.remove("flipped");
-                paper3.style.zIndex = 2; //Changed it from 1 to 2 since it would cause glitch where i cannot click on link on page if i reached end of book
+                paper3.style.zIndex = 2; // Helps me click on page before end once i go to end and back
                 break;
             default:
                 throw new Error("Unknown state");

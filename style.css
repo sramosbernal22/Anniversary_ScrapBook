@@ -20,6 +20,8 @@ body {
     width: 350px;
     height: 500px;
     transition: transform 0.5s;
+
+    
 }
 
 .paper {
@@ -29,6 +31,7 @@ body {
     top: 0;
     left: 0;
     perspective: 1500px;
+   
 }
 
 .front,
@@ -41,6 +44,7 @@ body {
     left: 0;
     transform-origin: left;
     transition: transform 0.5s;
+    
 }
 
 .front {
@@ -123,4 +127,21 @@ i {
     padding-top: 10%;
 }
 
+/* Anchor Tags */
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 20px;
+    text-decoration: none;
+    color: darkgray;
+    background-color: #F5F5DC;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
 
+.button:hover {
+    background-color: #D3D3C3;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
