@@ -127,6 +127,17 @@ i {
     padding-top: 10%;
 }
 
+/*Cosmetic 2022 Page */
+#b1 {
+    background-image: url('images/cover2022.jpg'); /* Correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative; /* Ensures background does not affect layout */
+}
+
+
 /* Anchor Tags */
 .button {
     display: inline-block;
@@ -145,3 +156,29 @@ i {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
+
+
+/*Phone size*/
+@media screen and (max-width: 600px) {
+    .book {
+        width: 90vw; /* Make it responsive */
+        height: 120vw; /* Maintain aspect ratio */
+        transform: scale(0.9); /* Make the book fit better */
+
+    }
+
+    .paper {
+        width: 100%;
+        height: 100%;
+    }
+
+    button {
+        margin: 5px; /* Reduce button spacing */
+    }
+
+    i {
+        font-size: 40px; /* Slightly smaller icons */
+    }
+}
+
+
