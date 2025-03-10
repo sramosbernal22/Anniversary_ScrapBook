@@ -17,9 +17,19 @@ let numOfPapers = 3;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
+    const isSmallScreen = window.innerWidth <= 600;
+    if(isSmallScreen)
+    {
+        book.style.transform = "translateX(25%) scale(0.5)";
+        prevBtn.style.transform = "translateX(-20px)";
+        nextBtn.style.transform = "translateX(20px)";
+    }
+    else{
     book.style.transform = "translateX(50%)";
     prevBtn.style.transform = "translateX(-180px)";
     nextBtn.style.transform = "translateX(180px)";
+    }
+    
 
 }
 
