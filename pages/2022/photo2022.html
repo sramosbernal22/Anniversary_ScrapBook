@@ -8,7 +8,19 @@
     <script src="./main.js" defer></script>
 </head>
 <body>
-    <a href="../../index.html" class="button">Back to Book</a>
+    <header class="header">
+        <a href="../../index.html" class="button">Back to Book</a>
+
+        <button id="music-btn">
+            <i class="fas fa-music"></i> Play Music
+        </button>
+    </header>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="../../music/02 - Rollin' Stone.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
     
     <div class="slider-container">
         <div class="slider">

@@ -72,3 +72,19 @@ function currentSlide(index) {
 
 // Auto-slide every 10 seconds
 setInterval(nextSlide, 10000);
+
+const musicBtn = document.querySelector("#music-btn");
+const bgMusic = document.querySelector("#bg-music");
+
+let isPlaying = false;
+
+musicBtn.addEventListener("click", () => {
+    if (isPlaying) {
+        bgMusic.pause();
+        musicBtn.innerHTML = '<i class="fas fa-music"></i> Play Music';
+    } else {
+        bgMusic.play();
+        musicBtn.innerHTML = '<i class="fas fa-music"></i> Pause Music';
+    }
+    isPlaying = !isPlaying;
+});

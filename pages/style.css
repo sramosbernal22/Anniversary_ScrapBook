@@ -3,6 +3,8 @@
     margin: auto;
     overflow: hidden;
     position: relative;
+    padding-top: 80px; /* Adjust this value based on the height of the header */
+
 }
 
 .slider {
@@ -51,7 +53,7 @@ img {
     width: auto;       /* Maintain aspect ratio */
 }
 
-/* Back Button */
+/* Back Button To Home*/
 .button {
     display: inline-block;
     padding: 12px 24px;
@@ -70,3 +72,58 @@ img {
     transform: translateY(-2px);
 }
 
+/*Music Button*/
+
+/* Header with Flexbox */
+.header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+
+#music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #F5F5DC;
+    color: darkgray;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+#music-btn:hover {
+    background-color: #D3D3C3;
+}
+
+/*Back to Home button resize for mobile */
+@media (max-width: 768px) {
+    .button {
+        padding: 10px 15px; 
+        font-size: 18px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .button:hover {
+        background-color: #218838;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);    
+    }
+}
